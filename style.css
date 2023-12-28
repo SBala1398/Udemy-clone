@@ -54,26 +54,28 @@
      align-items: center;
 
  }
-.mylearing{
-    position: relative;
-    cursor:pointer;
-}
-.mylearning__popup{
-    position: absolute;
-    background-color: white;
-    border: solid #a435F0 1px;
-    width: 100px;
-    top: 150%;
-    font-weight: bold;
-    padding: 10px;
-    right: 0;
-    display: none;
 
+ .mylearing {
+     position: relative;
+     cursor: pointer;
+ }
 
-}
-.mylearing:hover .mylearning__popup{
-    display: block;
-}
+ .mylearning__popup {
+     position: absolute;
+     background-color: white;
+     border: solid #a435F0 1px;
+     width: 100px;
+     top: 150%;
+     font-weight: bold;
+     padding: 10px;
+     right: 0;
+     display: none;
+ }
+
+ .mylearing:hover .mylearning__popup {
+     display: block;
+ }
+
  .categories {
      display: flex;
      padding: 10px;
@@ -86,8 +88,16 @@
      background-color: #a435F0;
      color: white;
      padding: 10px;
+     border: solid #a435F0 1px;
      border-radius: 30px;
+     cursor: pointer;
  }
+ .categories p:hover{
+    background-color: transparent;
+    color:black;
+    border: solid #a435F0 1px;
+    transition: 1s;
+}
 
  .sale-image {
      position: relative;
@@ -106,6 +116,20 @@
      top: 15%;
      left: 10%;
      opacity: 0.8;
+     animation-name: zoom;
+     animation-duration: 2s;
+     opacity: 0;
+     animation-fill-mode: forwards;
+ }
+ @keyframes zoom{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
  }
 
  .sale-image__offer h2 {
